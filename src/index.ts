@@ -2,13 +2,14 @@ import {Config} from './config';
 import {Store, Stores} from './store';
 import puppeteer from 'puppeteer';
 import open from 'open';
-import sendNotification from './notification';
+import {sendNotification, playAlert} from './notification';
 import {Logger} from './logger';
 
 /**
  * Starts the bot.
  */
-async function main() {
+ async function main() {
+        playAlert();
 	const results = [];
 	for (const store of Stores) {
 		Logger.debug(store.links);
@@ -31,7 +32,7 @@ async function main() {
 async function lookup(store: Store) {
 /* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({args: ['--no-sandbox']});
 		const page = await browser.newPage();
 		await page.setUserAgent(Config.page.userAgent);
 		await page.setViewport({
