@@ -47,6 +47,7 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
+- Click [here](https://thisdavej.com/node-js-playing-sounds-to-provide-notifications/), ctrl-f `Verify/install an audio player compatible with the play-sound NPM package` and follow the directions to install an audio player.
 - Run `npm install`
 - Copy `.env.example` to a new file `.env` and edit the `.env` file to your liking using your [favorite text editor](https://code.visualstudio.com/)
     - More on this in [customization](#Customization)
