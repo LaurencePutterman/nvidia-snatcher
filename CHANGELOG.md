@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.1.0...v1.2.0) (2020-09-18)
+
+
+### Features
+
+* add Amazon links ([#26](https://www.github.com/jef/nvidia-snatcher/issues/26)) ([f0560ce](https://www.github.com/jef/nvidia-snatcher/commit/f0560ce72bfbfdd6360b85e23edaa875d58f228f))
+* update to check if FE in-stock via Digital River ([#29](https://www.github.com/jef/nvidia-snatcher/issues/29)) ([00ede13](https://www.github.com/jef/nvidia-snatcher/commit/00ede13501082f530ea672a349816be1d31621a8))
+
 ## [1.1.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.0.0...v1.1.0) (2020-09-18)
 
 
