@@ -9,7 +9,8 @@ export function sendNotification(cartUrl: string) {
 	}
 }
 export function playAlert() {
-  player.play('../../media/alert.mp3', (err: string) => {
-  	if (err) Logger.debug(`Could not play sound: ${err}`);
+  Logger.info("calling playAlert()");
+  player.play('media/alert.mp3', (err: string) => {
+  	if (err) Logger.info(`Could not play sound: ${err}`);
   });
 }

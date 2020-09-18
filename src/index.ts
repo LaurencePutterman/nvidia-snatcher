@@ -9,7 +9,6 @@ import {Logger} from './logger';
  * Starts the bot.
  */
  async function main() {
-        playAlert();
 	const results = [];
 	for (const store of Stores) {
 		Logger.debug(store.links);
@@ -66,6 +65,7 @@ async function lookup(store: Store) {
 			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
 			await open(givenUrl);
 			sendNotification(givenUrl);
+			playAlert();
 		}
 
 		await browser.close();
@@ -93,6 +93,7 @@ function isOutOfStock(domText: string, oosLabels: string[]) {
  * Will continually run until user interferes.
  */
 try {
+	playAlert();
 	void main();
 } catch (error) {
 	// Ignoring errors; more than likely due to rate limits
