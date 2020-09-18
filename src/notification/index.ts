@@ -5,7 +5,7 @@ var player = require('play-sound')()
 import {Logger} from '../logger';
 
 
-export default function sendNotification(cartUrl: string) {
+export function sendNotification(cartUrl: string) {
 	if (Config.notificationMethods.toLocaleLowerCase().includes('email')) {
 		sendEmail(cartUrl);
 	}
